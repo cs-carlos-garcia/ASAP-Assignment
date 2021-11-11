@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+</head>
+<body>
+    <form id="my_form" method="POST">
+	<input type="text" placeholder="Member id">
+	</input>
+	<button type="submit">
+	    Existing Member?
+	</button>
+    </form>
+    <div>
+	<p>
+	    {% with messages = get_flashed_messages() %}
+	    {% if messages%}
+	        Success
+            {% endif %}
+	    {%endwith%}
+	</p>
+    </div>
+</body>
+</html>
